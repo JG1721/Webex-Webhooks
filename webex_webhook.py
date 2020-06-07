@@ -30,7 +30,8 @@ def post():
     message=api.messages.get(messageId=posted_data["data"]["id"])   #data and id parameters will help us get the message posted by mentioning bot name in the webex chat with the message
     roomId= message.roomId
     print(message)
-    if message.text == "My_test team":
+    #Below code checks the received message and respond accordingly. Please write your bot name and then message you wnat to receive.
+    if message.text == "<your bot name> team":
         team_mem = team[0]['Service Provider']['team_Name']
         api.messages.create(roomId=roomId, text="Team Member: " +str(team_mem))
     if message.text == "My_test help":
