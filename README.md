@@ -14,7 +14,7 @@ There are a few steps that we need to follow before we can use the code. It will
 
 3. Create your own group on webex teams. You can do it via GUI only. [This is the group in which we will be testing our bot, so add your bot and yourself in that group.]
 
-3. Open Postman application and Send a *GET* request to (https://api.ciscospark.com/v1/rooms) with below parameters:
+3. Open Postman application (https://www.postman.com/downloads/) and Send a *GET* request to (https://api.ciscospark.com/v1/rooms) with below parameters:
   --In the below tab, Go to the Authorization tab and select type "Bearer Token" and paste your bearer token there.
   --Now, go to headers tab and add "Content-type : " as "application/json".
   Press send. 
@@ -35,10 +35,12 @@ There are a few steps that we need to follow before we can use the code. It will
    ```    
   --From the list of json chats data that you currently see, select your group name that you have created. you can see the name of your     group in the title. Copy the id value "Y2lzY29zcGFyazovOWFlM2YtZmU3ZC0zYTNkLTlhZDMtZGQ3Misodsmdsmd" and keep it in your notes.  
 
-4. Now, again in the Postman application, Select "POST" and in url bar paste this : (https://api.ciscospark.com/v1/webhooks) 
+4. Now, again in the Postman application (https://www.postman.com/downloads/), Select "POST" and in url bar paste this : (https://api.ciscospark.com/v1/webhooks) 
   --In the below tab, Go to the Authorization tab and select type "Bearer Token" and paste your bearer token there.
-  --Now, go to headers tab and add "Content-type : " as "application/json".
-  --go to body tab and your body format must look like this:
+ 
+ --Now, go to headers tab and add "Content-type : " as "application/json".
+ 
+ --go to body tab and your body format must look like this:
   
     ```
     {
@@ -52,7 +54,7 @@ There are a few steps that we need to follow before we can use the code. It will
   
   --No need to change resource,event. but in *filter* put your group is that you have taken above as "roomId=yourgroupid". 
   
-  --For *targetUrl*, you can give your own external server on which you have a listener or you can just create one using tunneling  application like ngrok. You can download ngrok and just run it, you do not need to do anything else, just open cmd and go to the directory using cd where it is installed as *ngrok.exe*, type in cmd: *ngrok http 8080*, now the port must be same as your internal server 127.0.0.1:8080, for ngrok to tunnel the traffic for you.
+  --For *targetUrl*, you can give your own external server on which you have a listener or you can just create one using tunneling  application like ngrok (https://ngrok.com/) . You can download ngrok and just run it, you do not need to do anything else, just open cmd and go to the directory using cd where it is installed as *ngrok.exe*, type in cmd: *ngrok http 8080*, now the port must be same as your internal server 127.0.0.1:8080, for ngrok to tunnel the traffic for you.
   
   --For "name": put it as your webex group name that you have created.
   
@@ -78,7 +80,7 @@ There are a few steps that we need to follow before we can use the code. It will
 **Your group is registered now.
 Time to add bot in this.
 
---the requets will be exactly same like above. but all you need to change is:
+--the request will be exactly same like above. but all you need to change is:
 
 ```
 {
