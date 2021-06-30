@@ -95,5 +95,5 @@ Time to add bot in this.
   **if you see closely above request, I have just added made a small change in *filter*, everything is intact, the roomId is same as well, only add *&mentionedPeople=me* at the end of the roomId and click send.
   
 5. We are good to go now. Make sure while running the python script, the port number must match and also ngrok must be running, because our webhook is binded to our ngrok address only. Make changes to the script, like change *bot_token*, add your own bot token that you kept in step 1.
-  --requirement for code to run : flask library, WebexTeamsAPI library. You run pip install these. 
+  --requirement for code to run : flask library, WebexTeamsAPI library. You can run pip to install these. 
 
